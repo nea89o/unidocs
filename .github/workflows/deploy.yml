@@ -16,7 +16,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Gradle
-        uses: ./gradlew build
+        run: ./gradlew build
       - name: Deploy to Github Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
