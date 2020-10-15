@@ -17,6 +17,34 @@ val runPandoc by tasks.creating(PandocTask::class) {
         file("inject_header.html").absolutePath
     ))
 }
+
+fun genIndexes(folder: File) {
+    val indexFile = File(folder, "index.html")
+    var listing = """
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Roman Gräf">
+  <title>${folder.name} - Directory Listing</title>"""+file("inject_header.html").readText()+"""
+  </head>
+  <body><ul>"""
+    folder.listFiles().forEach {
+        if (it.isDirectory) {
+            genIndexes(it)
+        }
+        listing += "<li><a href=\"${it.name}\">${it.name}</a></li>"
+    }
+    indexFile.writeText(listing +"</ul></body></html>")
+}
+
+val generateIndex by tasks.creating {
+    doLast {
+        genIndexes(file("$buildDir/dist"))
+    }
+}
 val copyPdfs by tasks.creating(Copy::class) {
     description = "Copies all pdfs to the dist"
     group = "build"
@@ -31,6 +59,10 @@ val build by tasks.creating {
 
 build.dependsOn(copyPdfs)
 build.dependsOn(runPandoc)
+generateIndex.dependsOn(copyPdfs)
+generateIndex.dependsOn(runPandoc)
+
+build.dependsOn(generateIndex)
 val clean by tasks.creating{
     description = "Cleans up all build files"
     group = "build"
