@@ -19,6 +19,8 @@ jobs:
         run: sudo apt-get update -y && sudo apt-get install -y pandoc 
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Add CNAME file
+        run: echo uni.romangraef.com > build/dist/CNAME
       - name: Deploy to Github Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
