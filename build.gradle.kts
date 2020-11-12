@@ -35,7 +35,8 @@ fun genIndexes(folder: File) {
         if (it.isDirectory) {
             genIndexes(it)
         }
-        listing += "<li><a href=\"${it.name}\">${it.name}</a></li>"
+        if(it.name != "index.html")
+            listing += "<li><a href=\"${it.name}\">${it.name}</a></li>"
     }
     indexFile.writeText(listing +"</ul></body></html>")
 }
@@ -51,6 +52,7 @@ val copyPdfs by tasks.creating(Copy::class) {
     from("src")
     into("$buildDir/dist")
     include("**/*.pdf")
+    include("**/*.png")
 }
 val build by tasks.creating {
     description = "Fully builds build/dist"
