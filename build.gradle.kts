@@ -1,7 +1,7 @@
 import com.romangraef.uni.PandocTask
 
 
-val runPandoc by tasks.creating(PandocTask::class) {
+val runPandocHtml by tasks.creating(PandocTask::class) {
     description = "Generates all htmls from markdown"
     group = "build"
     inputDir.set(file("src"))
@@ -17,6 +17,22 @@ val runPandoc by tasks.creating(PandocTask::class) {
         file("inject_header.html").absolutePath
     ))
 }
+val runPandocPdf by tasks.creating(PandocTask::class) {
+  description = "Generates all pdfs from markdown"
+  group = "build"
+  toExtension = "pdf"
+  inputDir.set(file("src"))
+  outputDir.set(file("$buildDir/dist"))
+  extraArgs.set(listOf(
+      "--mathjax",
+      "--standalone",
+      "-t",
+      "pdf",
+      "-f",
+      "markdown+tex_math_dollars"
+  ))
+}
+
 
 fun genIndexes(folder: File) {
     val indexFile = File(folder, "index.html")
@@ -60,12 +76,14 @@ val build by tasks.creating {
 }
 
 build.dependsOn(copyPdfs)
-build.dependsOn(runPandoc)
+build.dependsOn(runPandocHtml)
+build.dependsOn(runPandocPdf)
 generateIndex.dependsOn(copyPdfs)
-generateIndex.dependsOn(runPandoc)
-
+generateIndex.dependsOn(runPandocHtml)
+generateIndex.dependsOn(runPandocPdf)
 build.dependsOn(generateIndex)
-val clean by tasks.creating{
+
+val clean by tasks.creating {
     description = "Cleans up all build files"
     group = "build"
     doLast {

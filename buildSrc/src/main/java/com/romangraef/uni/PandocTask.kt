@@ -31,14 +31,20 @@ abstract class PandocTask : DefaultTask() {
 	@get:Input
 	abstract val extraArgs: ListProperty<String>
 
+	@get:Input
+	var fromExtension = "md"
+
+	@get:Input
+	var toExtension = "html"
+
 	@TaskAction
 	fun execute(inputChanges: InputChanges) {
 		inputChanges.getFileChanges(inputDir).forEach { change ->
 			if (change.fileType == FileType.DIRECTORY) return@forEach
 			val target = outputDir.file(change.normalizedPath).get().asFile.run {
-				if(extension == "md")
-				File(parent, "$nameWithoutExtension.html")
-				else 
+				if(extension == fromExtension)
+				File(parent, "$nameWithoutExtension.$toExtension")
+				else
 				null
 			} ?: return@forEach
 			if (change.changeType == ChangeType.REMOVED) {
