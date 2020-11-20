@@ -1,6 +1,6 @@
 # Übungsblatt 01
 
-|Gruppennumer|Übungsleiterin|Name|
+|Gruppennummer|Übungsleiterin|Name|
 |---|---|---|
 |09|Emma Stellwag|Roman Gräf|
 |04|Rebeca Gehlhaar|Kai Dominik Westphal|
@@ -56,7 +56,7 @@ $$y+\sum_{n=1}^{x}n=\sum_{n=1}^{i}n+j$$
 $$y-j=\sum_{n=x+1}^{i}n$$
 
 Falls $x<i$, dann muss $y-j=0$ sein $\implies y=j\implies T(x) = T(i)\implies i=x$.
-Ansonßten $x=i\implies y=j$.
+Ansonsten $x=i\implies y=j$.
 
 Dementsprechend ist es eindeutig.
 
