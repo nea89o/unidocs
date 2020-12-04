@@ -1,3 +1,9 @@
+mi = ma = 0
+for n in range(1,1000):
+    x = (-1)**n+2/n
+    print(x)
+    mi= min(x,mi)
+    ma = max(x,ma)
 
-for n in range(10):
-    print(n*(n+1)/2)
+print("max:",ma)
+print("min:",mi)

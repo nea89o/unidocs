@@ -69,6 +69,7 @@ val copyPdfs by tasks.creating(Copy::class) {
     into("$buildDir/dist")
     include("**/*.pdf")
     include("**/*.png")
+    include("**/*.svg")
 }
 val build by tasks.creating {
     description = "Fully builds build/dist"
