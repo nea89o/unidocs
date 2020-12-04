@@ -3,6 +3,8 @@
 |Gruppennummer|Übungsleiterin|Name|
 |---|---|---|
 |09|Emma Stellwag|Roman Gräf|
+|04|Rebekka Gehlhaar|Kai Dominik Westphal|
+|03|Sebastian Fritz|Michael Gouchtchine|
 
 ## H2.1
 ### a)
@@ -42,35 +44,43 @@ $$f(av\cdot w)=f(av)+f(w)-1$$
 
 
 ## H2.2
-Die Stern-Operation ist definiert durch $L^*=\{\epsilon\}\cup\{w_1\dots w_n:n\ge 1,w_i\in L,\forall i\in\mathbb{N}:1\le i\le n\}$.
-
 ### a)
 
-$L\subseteq\{w_1:n=1,w_i\in L,\forall i\in\{1\}\}\subseteq L^*$
+ - (i) Laut Definition der Sternoperation aus dem Folien: $L=L^1\subseteq \bigcup_{m=0}^\infty L^m=L^*$.
+
+ - (ii) $( \forall w \in M^* : w^* \in M^* \land \forall c \in L : c^* \in M^* ) \implies \forall d \in L^* : d^* \in M^* \implies L^* \subseteq M^*$
+
+### b)
+
+ - (i) $(L^*)^* = \bigcup_{n=0}^\infty (\bigcup_{m=0}^\infty L^m)^n=\bigcup_{n=0}^\infty \bigcup_{m=0}^\infty L^{m\cdot n}=\bigcup_{n=0}^\infty L^n=L^*$
+
+ - (ii) $L\subseteq M\implies L\subseteq M\subseteq M^* \implies L\subseteq M^* \implies L^* \subseteq M^*$
+
+### c)
+
+Erstens: $(L\cup M \subseteq L^* M^* )\land (A\subseteq B\implies A^* \subseteq B^* \text{siehe b.2})\implies (L\cup M)^* \subseteq (L^* M^* )^*$
+
+Zweitens:
+$(L\cup M)^*=\{\epsilon\}\cup\{w_1\cdot ... \cdot w_n:n>1,w_i\in L\lor w_i\in M, für i=1,...n\}$
+
+Drittens: Hierbei ist $x_i$ Schreibweise für die i-te Komponente von x.
+
+$\forall x\in (L^* M^* )^* : x_i\in L\lor x_i\in M$
+
+Dementsprechend gilt $(L^* M^* )^* \subseteq (L\cup M)^*$. Aus Erstens und Drittens lässt sich schließen dass $(L^* M^* )^* = (L\cup M)^*$
 
 
 ## H2.3
-### L1
 
-![](AFE_2_l1.png)
-
-### L2
-
-![](U2_L2.svg)
+![L1](AFE_2_l1.png)
 
 
-### L3
+![L2](U2_L2.svg)
 
-![](U2_L3.svg)
+![L3](U2_L3.svg)
 
-### L4
+![L4](U2_L4.svg)
 
-![](U2_L4.svg)
+![L5](U2_L5.svg)
 
-### L5
-
-![](U2_L5.svg)
-
-### L6
-
-![](U2_L6.svg)
+![L6](U2_L6.svg)
