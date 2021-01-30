@@ -52,6 +52,20 @@ U := u
 F := f
 ```
 
+## 4.2)
+
+|   | x | m | x | x | p |
+|---|---|---|---|---|---|
+| 1 | S | N | S | S | P |
+| 2 | $\emptyset$ | M | $\emptyset$ | T | - |
+| 3 | $\emptyset$ | S | S | - | - |
+| 4 | $\emptyset$ | M, T | - | - | - |
+| 5 | S | - | - | - | - |
+
+Die sich dazu ergebende Ableitung wäre:
+
+$S\rightarrow ST\rightarrow SNS\rightarrow SNST\rightarrow SNSSP\rightarrow SNSSp$ $\rightarrow SNSxp\rightarrow SNxxp\rightarrow Smxxp\rightarrow xmxxp$
+
 ## 4.3)
 
 ### a)
