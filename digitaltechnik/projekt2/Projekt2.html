@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="digital-technik-projekt-teil-2">Digital Technik Projekt Teil 2</h1>
+<p>Roman Gräf</p>
+<h2 id="a">2.1a)</h2>
+<p><img src="2.1a.png" /> Der Schaltkreis besteht aus dem Input aus zwei Dreierketten von D-Flip-Flops, eine um Drei An-Takte zu überprüfen, und eine um Drei-Aus-Takte zu überprüfen.</p>
+<p>Die Dreierketten haben als Input in die D-Flip-Flops immer den Output des vorherigen D-Flip-Flops, geodert mit dem invertierten Reset-Signal und entweder dem Sensor-Input, oder dem invertierten Sensor-Input, für die An/Aus-Kette jeweils. Zusätzlich ist nach den beiden Ketten eine Schaltung um ein Output bis zum nächsten Reset zu erinnern. Der Output der letzten Kette wird an den Bus geschickt.</p>
+<h2 id="b">2.1b)</h2>
+<figure>
+<img src="2.1b.png" />
+</figure>
+<p>Dieser Schaltkreis kann fast alle Inputs einfach entweder an Motorcontrol weiterleiten, oder an den Bus zurückleiten. Die Ausnahme bildet C, welches bei einer Änderung des D_in(bus) Signals für einen Takt 1 wird. Dementsprechend ist C das XOR von D_in und dem D_in des letzten Takts (durch ein D-Flip-Flop verzögert)</p>
+<h2 id="c">2.1c)</h2>
+<figure>
+<img src="2.1c.png" />
+</figure>
+<p>C ist in dieser Schaltung ungenutzt. Theoretisch könnte C in Verbindung mit dem Signal das in R führt in eine S-R-Latch geführt werden die den Motor an oder Ausschaltet. Das erweist sich allerdings als nicht notwendig, da der Motor sowieso nur läuft wenn er nicht am Ziel ist (welches sich bei einer Änderung von D_in sowieso ändert). Da jedes Signal von C auch eine Änderung an D_in bedeutet, heißt dass das C hier ignoriert werden kann.</p>
+<p>Die Schaltung besteht im Wesentlichen aus einer 9-bit D-Flip-Flop Speicherzelle, die solange der Motor läuft entweder 0x1 oder 0x1ff addiert, abhängig von D_in. Hierbei wird der Overflow von Binärzahlen ausgenutzt, wodurch eine Addierung von 0x1ff zu einer Subtraktion von 0x1 führt.</p>
+<p>Der aktuelle Zustand der Speicherzelle wird mit entweder 0x0 oder 0x1ff verglichen. Abhängig von der Fahrrichtung (D_in) wird das eine oder das andere Ergebnis gewählt. Das Ergebnis dieser Kalkulation ist ein Wahrheitswert der beschreibt ob wir am Endzustand in diese Richtung sind. Falls dem der Fall ist, wird R gesetzt und der Motor gestoppt. Das Signal an den Motor wird zusätzlich noch mit dem invertiertem Emergency-Input geundet, so dass der Emergency-Knopf die Motoren ausschaltet und die Addierungen anhält.</p>
+<p>Die Outputs zu den Motoren sind für beide Motoren gleich, dementsprechend habe ich sie hier zusammengefasst.</p>
+<h3 id="a-1">2.2a)</h3>
+<ul>
+<li>Wasser: 000X1
+<ul>
+<li>X = Eiswürfel</li>
+</ul></li>
+<li>Cola: 001XY
+<ul>
+<li>X = Eiswürfel</li>
+<li>Y = Zucker</li>
+</ul></li>
+<li>Orange: 010XY
+<ul>
+<li>X = Eiswürfel</li>
+<li>Y = Zucker</li>
+</ul></li>
+<li>Zitrone: 011XY
+<ul>
+<li>X = Eiswürfel</li>
+<li>Y = Zucker</li>
+</ul></li>
+<li>Kaffee: 1000Y
+<ul>
+<li>Y = Zucker</li>
+</ul></li>
+<li>Milchkaffee: 101XY
+<ul>
+<li>X = LatteMachiato: 0 oder Cappuccino: 1</li>
+<li>Y = Zucker</li>
+</ul></li>
+<li>Tee: 1100Y
+<ul>
+<li>Y = Zucker</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Getränk</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wasser</td>
+<td>00001</td>
+</tr>
+<tr class="even">
+<td>Wasser m. Eiswürfeln</td>
+<td>00011</td>
+</tr>
+<tr class="odd">
+<td>Cola</td>
+<td>00101</td>
+</tr>
+<tr class="even">
+<td>Cola o. Zucker</td>
+<td>00100</td>
+</tr>
+<tr class="odd">
+<td>Cola m. Eiswürfeln</td>
+<td>00111</td>
+</tr>
+<tr class="even">
+<td>Cola m. Eiswürfeln o. Zucker</td>
+<td>00110</td>
+</tr>
+<tr class="odd">
+<td>Orange</td>
+<td>01001</td>
+</tr>
+<tr class="even">
+<td>Orange o. Zucker</td>
+<td>01000</td>
+</tr>
+<tr class="odd">
+<td>Orange m. Eiswürfeln</td>
+<td>01011</td>
+</tr>
+<tr class="even">
+<td>Orange m. Eiswürfeln o. Zucker</td>
+<td>01010</td>
+</tr>
+<tr class="odd">
+<td>Zitrone</td>
+<td>01101</td>
+</tr>
+<tr class="even">
+<td>Zitrone o. Zucker</td>
+<td>01100</td>
+</tr>
+<tr class="odd">
+<td>Zitrone m. Eiswürfeln</td>
+<td>01111</td>
+</tr>
+<tr class="even">
+<td>Zitrone m. Eiswürfeln o. Zucker</td>
+<td>01110</td>
+</tr>
+<tr class="odd">
+<td>Kaffee</td>
+<td>10000</td>
+</tr>
+<tr class="even">
+<td>Kaffee m. Zucker</td>
+<td>10001</td>
+</tr>
+<tr class="odd">
+<td>LatteMachiato</td>
+<td>10100</td>
+</tr>
+<tr class="even">
+<td>LatteMachiato m. Zucker</td>
+<td>10101</td>
+</tr>
+<tr class="odd">
+<td>Cappuccino</td>
+<td>10110</td>
+</tr>
+<tr class="even">
+<td>Cappuccino m. Zucker</td>
+<td>10111</td>
+</tr>
+<tr class="odd">
+<td>Tee</td>
+<td>11000</td>
+</tr>
+<tr class="even">
+<td>Tee m. Zucker</td>
+<td>11001</td>
+</tr>
+</tbody>
+</table>
+<p>Diese Kombinationen sind noch nicht besetzt: 11011 11010 10010 10011 11100 11111 11101 11110 00011 00001</p>
+<p>Wenn man dem logischem Aufbau der anderen Getränke folgt kann man einen Teil als Wasser (mit oder ohne Eiswürfel) mit Zucker sehen (00001 und 00011). Der Rest wären jeweils zwei Varianten von Tee und Kaffee (jeweils für gezuckert und ungezuckert), sowie ein komplett neues Heisgetränk welches auch zwei mal zwei Varianten hätte.</p>
+<h2 id="b-1">2.2b</h2>
+<figure>
+<img src="2.2b.png" />
+</figure>
+<p>Der Takt für diese Zweistufenpipeline muss 1/9 Hz sein, da die Wasserkühlung 9s braucht um das Wasser zu kühlen.</p>
+<h2 id="section">2.3</h2>
+<p>Syntax für das hier:</p>
+<pre><code>STATE name outputname=outputvalue outputname2=outputvalue
+TRANSITION vonname, inputname=inputvalue &amp; inputname2=inputvalue2 -&gt; zuname
+n TIMES -&gt; i:</code></pre>
+<p>STATE erzeugt einen state, TRANSITION gibt eine transition an. n TIMES wiederholt den block n mal mit der variable i gesetzt.</p>
+<pre><code>STATE shutdown
+INITIAL_STATE 50_wait
+50 TIMES -&gt; i:
+  STATE $i_wait
+  32 TIMES -&gt; g:
+    STATE $i_drink_$g G_in=1 Y(G)=$g
+    TRANSITION $i_wait, V &amp; $g -&gt; $i_drink_
+    TRANSITION $i_drink_ -&gt; $i_door_opening
+  STATE $i_door_opening S_in=1 S_out=1 Y(D_in)=1
+  TRANSITION $i_door_opening, X(R)=1 -&gt; $i_door_open
+  TRANSITION $i_door_opening, X(D_in)=0 -&gt; shutdown
+  STATE $i_door_open L_out=1
+  TRANSITION $i_door_open, X(O) -&gt; $i_person_passed
+  STATE $i_person_passed L_in=1 Y(R)=1
+  TRANSITION $i_person_passed -&gt; $i_door_closing
+  STATE $i_door_closing S_in=1 S_out=1 Y(D_in)=0
+  TRANSITION $i_door_closing, X(D_in)=1 -&gt; shutdown
+  TRANSITION $i_door_closing, X(R)1 -&gt; $i_door_closed
+  STATE $i_door_closed D_in=1, X(D)=$i
+  IF $i == 1:
+    TRANSITION $i_door_closed -&gt; shutdown
+  ELSE:
+    TRANSITION $i_door_closed -&gt; $(i-1)_wait</code></pre>
+<p>Ich hoffe hier war kein Diagram gefordert, mir war allerdings nicht klar wie ich das mit so vielen Zuständen sinnvoll zeichnen soll.</p>
+<h2 id="section-1">2.4</h2>
+<figure>
+<img src="2.4.png" />
+</figure>
+</body>
+</html>

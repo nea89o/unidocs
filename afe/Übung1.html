@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="übungsblatt-01">Übungsblatt 01</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Gruppennummer</th>
+<th>Übungsleiterin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>09</td>
+<td>Emma Stellwag</td>
+<td>Roman Gräf</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>Rebeca Gehlhaar</td>
+<td>Kai Dominik Westphal</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>Sebastian Fritz</td>
+<td>Michael Gouchtchine</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aufgabe-h1.1">Aufgabe H1.1</h2>
+<h3 id="a">a)</h3>
+<figure>
+<img src="Schokolade.png" />
+</figure>
+<h3 id="b">b)</h3>
+<p>Die Position A ist eine Verlier-Position. Durch das Essen des letzten Stückes verliert man und es führt kein Weg daran vorbei. Eine Gewinnposition wäre eine, die den Gegner in Position A bringen kann, z.B B oder C. Dadurch ist auch D eine Verlier-Position da es in der Position keinen anderen Optionen gibt als den Gegner in eine Gewinnposition zu bringen. Durch E und F kann man den Gegner in Position D zwingen. Somit sind diese Gewinnpositionen. Position G erlaubt es lediglich den Gegner in Gewinnpositionen bringen zu können, daher ist G eine Verlier- Position.</p>
+<h3 id="c">c)</h3>
+<p>Derjenige der anfängt kann immer gewinnen indem er/sie zu Beginn (H) das Stück oben links isst und den Gegner damit in die Verlier-Position G bringt. Der Gegner muss wählen zwischen B,C,E oder F; Er befindet sich stets in einer Verlier-Position, während der/die beginnende Spieler/in sich immer in einer Gewinnposition befindet.</p>
+<h2 id="aufgabe-h1.2">Aufgabe H1.2</h2>
+<h3 id="aufgabe-a">Aufgabe a)</h3>
+<ul>
+<li><ol type="i">
+<li>Die Relation <span class="math inline">\(R_1\)</span> ist nicht reflexiv. Beispiel: <span class="math inline">\(\lbrace a\rbrace\)</span></li>
+</ol></li>
+<li><ol start="2" type="i">
+<li>Die Relation <span class="math inline">\(R_2\)</span> ist reflexiv, symmetrisch und transitiv <span class="math inline">\(\implies\)</span> eine Äquivalenzrelation.</li>
+</ol></li>
+<li><ol start="3" type="i">
+<li>Die Relation <span class="math inline">\(R_3\)</span> ist reflexiv, symmetrisch und transitiv <span class="math inline">\(\implies\)</span> eine Äquivalenzrelation.</li>
+</ol></li>
+</ul>
+<h3 id="aufgabe-b">Aufgabe b)</h3>
+<ul>
+<li><ol start="2" type="i">
+<li>Die Relation <span class="math inline">\(R_2\)</span> ist verträglich mit der Konkatenationsoperation.</li>
+</ol></li>
+<li><ol start="3" type="i">
+<li>Die Relation <span class="math inline">\(R_3\)</span> ist nicht verträglich mit der Konkatenationsoperation.</li>
+</ol></li>
+</ul>
+<p>Gegenbeispiel:</p>
+<p><span class="math inline">\(u_1 = ababa\)</span> <span class="math inline">\(v_1 = babab\)</span> <span class="math inline">\(u_2 = abba\)</span> <span class="math inline">\(v_2 = abba\)</span></p>
+<p><span class="math display">\[(u_1,v_1)\in R_3\text{ und }(u_2,v_2) \in R_3\text{ aber }(u_1u_2, v_1v_2) \notin R_3\]</span></p>
+<h2 id="aufgabe-h1.3">Aufgabe H1.3</h2>
+<p><span class="math display">\[T(n)=\frac{n\cdot(n+1)}{2}\]</span> <span class="math display">\[f(x,y)=T(x+y)+x=T(m)+x\]</span></p>
+<p>Für ein gegebenes <span class="math inline">\(n\in\mathbb{N}\)</span> wähle man das größtmöglichste <span class="math inline">\(m\in\mathbb{N}\)</span> so, dass <span class="math inline">\(T(m)\le n\)</span> gilt, sowie <span class="math inline">\(x=n-T(m)\)</span>. Da <span class="math inline">\(T(m)\le n&lt;T(m+1)\)</span>: <span class="math inline">\(x=n-T(m)&lt;T(m+1)-T(y)=m+1\)</span>, d.h. das <span class="math inline">\(y=m-x&gt;0\)</span>. Dementsprechend existiert für jedes <span class="math inline">\(n\)</span> mindestens ein Paar <span class="math inline">\((x,y)\)</span> für das <span class="math inline">\(f(x,y)=n\)</span> gilt.</p>
+<p>Angenommen es existeren <span class="math inline">\((x,y),(i,j)\in\mathbb{N}\times\mathbb{N}\)</span>, so dass <span class="math inline">\(T(x)+y=T(i)+j\)</span>, mit <span class="math inline">\(x\le y\land i\le j\)</span> und <span class="math inline">\(x\le i\)</span>. <span class="math inline">\(T(n)\)</span> kann als <span class="math inline">\(\sum_{m=1}^{n}m\)</span> neuschreiben (siehe Gaussche Summenformel). <span class="math display">\[y+\sum_{n=1}^{x}n=\sum_{n=1}^{i}n+j\]</span> <span class="math display">\[y-j=\sum_{n=x+1}^{i}n\]</span></p>
+<p>Falls <span class="math inline">\(x&lt;i\)</span>, dann muss <span class="math inline">\(y-j=0\)</span> sein <span class="math inline">\(\implies y=j\implies T(x) = T(i)\implies i=x\)</span>. Ansonsten <span class="math inline">\(x=i\implies y=j\)</span>.</p>
+<p>Dementsprechend ist es eindeutig.</p>
+<p>Da sowohl injektivität als auch surjektivität bewiesen sind, ist die bijektivität bewiesen.</p>
+<h3 id="funktion-g">Funktion g</h3>
+<p>Die Funktion <span class="math inline">\(f\)</span> erhält ein 2-Tupel natürlicher Zahlen <span class="math inline">\(x\)</span> und <span class="math inline">\(y\)</span> und bringt sie zu einem Wert <span class="math inline">\(w\in\mathbb{N}\)</span>.<br />
+<!--Wir nehmen an, dass $f$ bijektiv ist, auch wenn wir es nicht vollständig beweisen können.--> Für die Eingabe <span class="math inline">\(f(w,z)\)</span> mit <span class="math inline">\(z\in \mathbb{N}\)</span> erhalten wir also ebenfalls ein singuläres Ergebnis. Bringen wir nun <span class="math inline">\(w\)</span> in seine Ursprungsform <span class="math inline">\(f(x,y)\)</span> so erhalten wir <span class="math inline">\(f(f(x,y),z)\)</span>, welches auch bijektiv ist. Damit verknüpft es 3 Elemente aus <span class="math inline">\(\mathbb{N}\)</span>, man könnte es also auch schreiben als Funktion <span class="math inline">\(g(x,y,z)\)</span>, welche eine Bijektion von <span class="math inline">\(\mathbb{N}\times\mathbb{N}\times\mathbb{N} \longmapsto \mathbb{N}\)</span> darstellt.<br />
+<span class="math inline">\(g(x,y,z)=\frac{(f(x,y)+z)\cdot(f(x,y)+z+1)}{2}+f(x,y)\)</span></p>
+</body>
+</html>

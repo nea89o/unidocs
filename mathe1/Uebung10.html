@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="h10">H10</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Gruppennummer</th>
+<th>Übungsleiterin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>Eya Chemangui</td>
+<td>Roman Gräf</td>
+</tr>
+<tr class="even">
+<td>07</td>
+<td>Keyoumars Kayhanfar</td>
+<td>Krist-Obi Fredrick</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>Keyoumars Kayhanfar</td>
+<td>Johannes Yaunan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bitte-bewerten-sie-h10.2-und-h10.3.">Bitte bewerten sie H10.2 und H10.3.</h2>
+<h2 id="h10.1">H10.1</h2>
+<h3 id="a---b">a -&gt; b)</h3>
+<p>Zu zeigen: <span class="math inline">\(A\)</span> ist orthogonal impliziert dass <span class="math inline">\(A\)</span> invertierbar ist und <span class="math inline">\(A^{-1}=A^T\)</span> gilt.</p>
+<p>Eine Matrix <span class="math inline">\(A\)</span> ist invertierbar, wenn diese quadratisch ist und eine <span class="math inline">\(det(A) \ne 0\)</span> hat. Da wir nur quadratische Matrixen betrachten, bleibt zu zeigen, dass die Determinante orthogonaler Matrixen immer <span class="math inline">\(\ne 0\)</span> ist.</p>
+<p>Die Determinante einer <span class="math inline">\(n \times n\)</span> Matrix ist genau dann <span class="math inline">\(=0\)</span>, wenn <span class="math inline">\(Rang(A) &lt; n\)</span>. Der Rang beschreibt die Anzahl linear unabhängiger Zeilen/Spalten in einer Matrix. Da bei einer orthogonalen Matrix alle Zeilen/Spalten paarweise orthogonal, d.h. linear Unabhängig, sind, ist der <span class="math inline">\(Rang(A)\)</span> der orthogonalen Matrix <span class="math inline">\(=n\)</span>. Daraus folgt dass die Determinante der orthogonalen Matrix <span class="math inline">\(\ne 0\)</span>, und dementsprechend ist <span class="math inline">\(A\)</span> invertierbar.</p>
+<p>Bleibt zu zeigen dass <span class="math inline">\(A^{-1}=A^T\)</span>:</p>
+<p>Da es sich bei <span class="math inline">\(A=\left( a_1, \ldots, a_n \right)\)</span> um eine orthogonale Matrix handelt, gilt: <span class="math inline">\(\langle a_i, a_j\rangle =\left\{\begin{array}{cc}0 &amp; i \neq j \\ 1 &amp; i=j\end{array}\right.\)</span>, da ein normierter Vektor mit sich selbst multipliziert <span class="math inline">\(=1\)</span> ist, und alle anderen Vektoren einer orthogonalen Matrix jeweils paarweise orthogonal sind.</p>
+<p>Zu zeigen: <span class="math inline">\(AA^{T} = I\)</span></p>
+<p>Das ist equivalent dazu, zu zeigen das: <span class="math inline">\(I_{i,j} = \langle A_{i}, A^{T}_{j}\rangle\)</span></p>
+<p>Das ist der Fall, falls <span class="math inline">\(i=j\implies \langle A_i, A^T_j\rangle = 1\)</span>, und für alle anderen Fälle <span class="math inline">\(\langle A_i, A^T_j\rangle = 0\)</span>.</p>
+<h3 id="b---c">b -&gt; c)</h3>
+<p>Zu zeigen <span class="math inline">\(AA^{-1}=I\land A^T=A^{-1}\implies\)</span> die Zeilen von <span class="math inline">\(A\)</span> bilden eine Orthonormalbasis.</p>
+<p>Aus <span class="math inline">\(AA^T=I\)</span> folgt, dass das Produkt zweier ungleicher Vektoren aus <span class="math inline">\(A\)</span> stehts null ergibt. Dementsprechend sind alle Zeilen aus <span class="math inline">\(A\)</span> paarweise orthogonal, d.h. die Zeilen aus <span class="math inline">\(A\)</span> bilden eine Orthogonalbasis.</p>
+<p>Bleibt zu zeigen, dass die euklidische Norm aller Zeilen <span class="math inline">\(1\)</span> ist.</p>
+<p>Aus <span class="math inline">\(A^{-1}=A^T\)</span> folgt dass für jeden Vektor <span class="math inline">\(a\)</span> aus <span class="math inline">\(A\)</span> gilt: <span class="math inline">\(\langle a, a\rangle = 1\)</span>.</p>
+<p>Dann ist <span class="math inline">\(\langle a,a\rangle = a_1^2+ \ldots + a_n^2 = \left(\sqrt{a_1^2+\ldots+a_n^2}\right)^2 = \left(||a||_2\right)^2 = 1^2 \implies ||a||_2=1\)</span></p>
+<h2 id="h10.2">H10.2</h2>
+<h3 id="a">a)</h3>
+<p><span class="math inline">\(A=\left(\begin{array}{lll}2 &amp; 0 &amp; 0 \\ 1 &amp; 3 &amp; 0 \\ 4 &amp; 5 &amp; 6\end{array}\right)\)</span></p>
+<p><span class="math inline">\((A-\lambda I)=\left(\begin{array}{lll}2-\lambda &amp; 0 &amp; 0 \\ 1 &amp; 3 - \lambda &amp; 0 \\ 4 &amp; 5 &amp; 6 - \lambda\end{array}\right)\)</span></p>
+<p><span class="math inline">\(det(A-\lambda I)=0 = (2-\lambda)(3-\lambda)(6-\lambda)\implies \lambda = 2 \lor \lambda = 3 \lor \lambda = 6\)</span></p>
+<p>Für <span class="math inline">\(\lambda=2:(A-2I)v_1=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x &amp; y &amp; z &amp; \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 0 &amp; 0 \\ 4 &amp; 5 &amp; 4 &amp; 0\end{array}\right)\)</span></p>
+<p>Dementsprechend gilt <span class="math inline">\(z=t\)</span>, <span class="math inline">\(x = -y\)</span> und <span class="math inline">\(-x+4t=0\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_1=t\cdot\left(\begin{array}{} 4\\-4\\1\end{array}\right):t \in\mathbb R\backslash\{0\}\)</span>. Dementsprechend ist die Dimension von <span class="math inline">\(v_1=1\)</span>.</p>
+<p>Für <span class="math inline">\(\lambda=3:(A-3I)v_1=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x &amp; y &amp; z &amp; \\ -1 &amp; 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 4 &amp; 5 &amp; 3 &amp; 0\end{array}\right)\)</span></p>
+<p>Mit <span class="math inline">\(I&#39;=I+II\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x &amp; y &amp; z &amp; \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 4 &amp; 5 &amp; 3 &amp; 0\end{array}\right)\)</span></p>
+<p>Dementsprechend gilt <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y = t\)</span> und <span class="math inline">\(4x+5y+3z=0\implies 5t+3z=0\implies z =-\frac{5}{3}t\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_2=t\cdot\left(\begin{array}{} 0\\1\\-\frac{5}{3}\end{array}\right):t \in\mathbb R\backslash\{0\}\)</span>. Dementsprechend ist die Dimension von <span class="math inline">\(v_2=1\)</span>.</p>
+<p>Für <span class="math inline">\(\lambda=6:(A-6I)v_1=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x &amp; y &amp; z &amp; \\ -4 &amp; 0 &amp; 0 &amp; 0 \\ 1 &amp; -3 &amp; 0 &amp; 0 \\ 4 &amp; 5 &amp; 0 &amp; 0\end{array}\right)\)</span></p>
+<p>Dementsprechend gilt <span class="math inline">\(x=0\)</span>, <span class="math inline">\(y=0\)</span> und <span class="math inline">\(z=t\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_3=t\cdot\left(\begin{array}{} 0\\0\\1\end{array}\right):t \in\mathbb R\backslash\{0\}\)</span>. Dementsprechend ist die Dimension von <span class="math inline">\(v_3=1\)</span>.</p>
+<p>Da die Summe der Dimensionen der Eigenvektoren <span class="math inline">\(\Sigma dim(v_i) = 3\)</span>, ist die Matrix <span class="math inline">\(A\)</span> diagonalisierbar. Eine Diagonalmatrix ist</p>
+<p><span class="math inline">\(D=\left(\begin{array}{lll}2 &amp; 0 &amp; 0\\ 0 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 6\end{array}\right)\)</span></p>
+<h3 id="b">b)</h3>
+<p><span class="math inline">\(B=\left(\begin{array}{}-1 &amp; 0 &amp; -1 \\ 1 &amp; -1 &amp; 3 \\ 0 &amp; 0 &amp; -2 \end{array}\right)\)</span></p>
+<p><span class="math inline">\((B-\lambda I)=\left(\begin{array}{}-1-\lambda &amp; 0 &amp; -1 \\ 1 &amp; -1-\lambda &amp; 3 \\ 0 &amp; 0 &amp; -2-\lambda \end{array}\right)\)</span></p>
+<p><span class="math inline">\(det(B-\lambda I) = (-2-\lambda)\cdot det\left(\begin{array}{}-1-\lambda &amp; 0 \\ 1 &amp; -1-\lambda \end{array}\right)\)</span></p>
+<p><span class="math inline">\(0 = (-2-\lambda)(-1-\lambda)^2 \implies \lambda = -2\lor \lambda = -1\)</span></p>
+<p>Für <span class="math inline">\(\lambda=-1\)</span>: <span class="math inline">\((B+1I)v_1=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x&amp;y&amp;z&amp;\\0 &amp; 0 &amp; -1 &amp; 0 \\ 1 &amp; 0 &amp; 3 &amp; 0\\0&amp;0&amp;-1&amp;0\end{array}\right)\)</span></p>
+<p>Dementsprechend gilt <span class="math inline">\(z=0\)</span>, <span class="math inline">\(x=0\)</span> und <span class="math inline">\(y=v\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_1=\left(\begin{array}{}0\\u\\0\end{array}\right): u\in\mathbb R\)</span>. Die Dimension von <span class="math inline">\(v_1=1\)</span>.</p>
+<p>Für <span class="math inline">\(\lambda=-2\)</span>: <span class="math inline">\((B+2I)v_2=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x&amp;y&amp;z&amp;\\1 &amp; 0 &amp; -1 &amp; 0 \\ 1 &amp; 1 &amp; 3 &amp; 0\\0&amp;0&amp;0&amp;0\end{array}\right)\)</span></p>
+<p>Dementsprechend gilt: <span class="math inline">\(x=u\)</span>, <span class="math inline">\(z=-x=-u\)</span> und <span class="math inline">\(u+y-3u=0\implies y-2u=0\implies y=2u\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_2=\left(\begin{array}{}u\\2u\\-u\end{array}\right) : u\in\mathbb R\)</span>. Die Dimension von <span class="math inline">\(v_2=1\)</span>.</p>
+<p>Da die Summe der Dimensionen der Eigenvektoren <span class="math inline">\(\Sigma dim(v_i)=2\neq 3\)</span>, dementsprechend ist <span class="math inline">\(B\)</span> nicht diagonalisierbar.</p>
+<h2 id="h10.3">H10.3</h2>
+<p><span class="math inline">\(A=\left(\begin{array}{}-2&amp;-1&amp;-1\\ 0 &amp;2&amp;4\\0&amp;1&amp;-1\end{array}\right)\)</span>.</p>
+<p><span class="math inline">\(A-\lambda I=\left(\begin{array}{}-2-\lambda&amp;-1&amp;-1\\ 0 &amp;2-\lambda&amp;4\\0&amp;1&amp;-1-\lambda\end{array}\right)\)</span>. <span class="math inline">\(det(A-\lambda I)=(-2-\lambda)\cdot det\left(\begin{array}{}2-\lambda &amp;4 \\1&amp;-1-\lambda\end{array}\right) = (-2-\lambda)((2-\lambda)(-1-\lambda)-4)=0\)</span> <span class="math inline">\(\implies \lambda=-2\lor (2-\lambda)(-1-\lambda)=4\)</span></p>
+<p><span class="math inline">\((2-\lambda)(-1-\lambda)=-2+2\lambda-\lambda+\lambda^2=4\)</span></p>
+<p><span class="math inline">\(\lambda^2+\lambda-6=0\)</span></p>
+<p><span class="math inline">\(\lambda=-\frac{1}{2}\pm\sqrt{\frac{1}{4}+6}\)</span></p>
+<p><span class="math inline">\(\lambda=-\frac{1}{2}\pm\frac{5}{2}\)</span></p>
+<p><span class="math inline">\(\implies \lambda=-2\lor\lambda=3\)</span></p>
+<p>Für <span class="math inline">\(\lambda=-2\)</span>: <span class="math inline">\((A+2I)v_1=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x&amp;y&amp;z&amp;\\0 &amp; -1 &amp; -1&amp;0\\0 &amp; 4&amp; 4&amp;0\\ 0 &amp; 1&amp;1&amp;0\end{array}\right)\)</span></p>
+<p>Dementsprechend ist <span class="math inline">\(x=u\)</span> und <span class="math inline">\(y=-z=v\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_1=\left(\begin{array}{}u\\v\\-v\end{array}\right) : u,v\in\mathbb R\)</span></p>
+<p>Für <span class="math inline">\(\lambda=3\)</span>: <span class="math inline">\((A-3I)v_2=0\)</span>:</p>
+<p><span class="math inline">\(\left(\begin{array}{lll|l}x&amp;y&amp;z&amp;\\-5 &amp; -1 &amp; -1&amp;0\\0 &amp; -1&amp; 4&amp;0\\ 0 &amp; 1&amp;-4&amp;0\end{array}\right)\)</span></p>
+<p>Dementsprechend ist <span class="math inline">\(z=u\)</span>, <span class="math inline">\(y-4z=y-4u=0\implies y=4u\)</span> und <span class="math inline">\(-5x-y-z=-5x-4u-u=0\implies -5x=5u\implies x=-1\)</span>.</p>
+<p>Dementsprechend ist <span class="math inline">\(v_2=\left(\begin{array}{}-u\\4u\\u\end{array}\right) : u\in\mathbb R\)</span></p>
+<p>Eine Diagonalmatrix <span class="math inline">\(D\)</span> zu <span class="math inline">\(A\)</span> ist</p>
+<p><span class="math inline">\(D=\left(\begin{array}{}4&amp;0&amp;0\\0&amp;-2&amp;0\\0&amp;0&amp;-2\end{array}\right)\)</span></p>
+<p><span class="math inline">\(S=\left(\begin{array}{}-1&amp;1&amp;0\\4&amp;0&amp;-1\\1&amp;0&amp;1\end{array}\right)\)</span></p>
+<p><span class="math inline">\(A^{-1}=\left(\begin{array}{}-\frac{1}{2}&amp;-\frac{1}{6}&amp;-\frac{1}{6}\\0&amp;\frac{1}{6}&amp;\frac{2}{3}\\0&amp;\frac{1}{6}&amp;-\frac{1}{3}\end{array}\right)\)</span></p>
+<p><span class="math inline">\(S^{-1}=\left(\begin{array}{}0&amp;\frac{1}{5}&amp;\frac{1}{5}\\1&amp;\frac{1}{5}&amp;\frac{1}{5}\\0&amp;-\frac{1}{5}&amp;\frac{4}{5}\end{array}\right)\)</span></p>
+</body>
+</html>

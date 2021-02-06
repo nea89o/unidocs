@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="h07">H07</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Gruppennummer</th>
+<th>Übungsleiterin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>Eya Chemangui</td>
+<td>Roman Gräf</td>
+</tr>
+<tr class="even">
+<td>07</td>
+<td>Keyoumars Kayhanfar</td>
+<td>Krist-Obi Fredrick</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>Keyoumars Kayhanfar</td>
+<td>Johannes Yaunan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h07.1">H07.1</h2>
+<h3 id="a">a)</h3>
+<p><span class="math inline">\(\langle(x_1,x_2)^T,(y_2,y_2)^T\rangle:=(x_1+x_2)\cdot y_1\)</span></p>
+<p>Diese Konstruktion wiederspricht der Symmetrie von Skalarprodukten:</p>
+<p><span class="math inline">\(\langle(0,1)^T,(1,1)^T\rangle=(0+1)\cdot 1=1\ne 0 = (1+1)\cdot 0 =\langle(1,1)^T,(0,1)^T\rangle\)</span></p>
+<h3 id="b">b)</h3>
+<p><span class="math inline">\(\langle(x_1,x_2)^T,(y_1,y_2)^T\rangle :=(x_1+x_2)\cdot(y_1+y_2)\)</span></p>
+<p>Diese Konstruktion wiederspricht der Definitheit von Skalarprodukten:</p>
+<p><span class="math inline">\(\langle(1,-1)^T,(1,-1)^T\rangle=(1+-1)\cdot(1+-1)=0\implies(1,-1)^T=0\)</span></p>
+<h3 id="c">c)</h3>
+<p><span class="math inline">\(\langle(x_1,x_2)^T,(y_1,y_2)^T\rangle:=x_1\cdot y_1 + 2\cdot x_2\cdot y_2\)</span></p>
+<p>Definitheit:</p>
+<p><span class="math inline">\(\forall x\in\mathbb{R}^2:\langle x,x\rangle=x_1^2+2x^2_2\geq 0\)</span>, da die Summe von positiven Zahlen (die Quadrate in <span class="math inline">\(\mathbb{R}\)</span> immer sind) immer nicht-negativ ist, ist das hier gegeben.</p>
+<p><span class="math inline">\(x_1^2+2x_2^2=0\implies x_1=0 \land x_2=0\)</span> <span class="math inline">\(x_1=0,x_2=0\implies \langle x,x\rangle = 0^2+2\cdot 0^2=0\)</span></p>
+<p>Symmetrie:</p>
+<p><span class="math inline">\(\forall x,y\in\mathbb{R}^2:\langle x,y\rangle=x_1\cdot y_1+2\cdot x_2\cdot y_2\stackrel{\text{Kommutativgesetz}}=y_1\cdot x_1+2\cdot y_2\cdot x_2=\langle y,x\rangle\)</span></p>
+<p>Linearität im ersten Argument:</p>
+<p><span class="math inline">\(\forall x,y,z\in\mathbb{R}^2\forall\alpha,\beta\in\mathbb{R}:\langle\alpha x+\beta y,z\rangle=(\alpha x_1+\beta y_1)\cdot z_1+2\cdot(\alpha x_2+\beta y_2)\cdot z_2\)</span> <span class="math inline">\(=\alpha\cdot x_1\cdot z_1+\beta \cdot y_1\cdot z_1+2\alpha \cdot x_2\cdot z_2+2\beta \cdot y_2\cdot z_2\)</span> <span class="math inline">\(=\alpha\cdot x_1\cdot z_1+2\alpha \cdot x_2\cdot z_2+\beta \cdot y_1\cdot z_1+2\beta \cdot y_2\cdot z_2\)</span> <span class="math inline">\(=\alpha\cdot x_1\cdot z_1+\alpha\cdot 2 \cdot x_2\cdot z_2+\beta \cdot y_1\cdot z_1+\beta\cdot 2 \cdot y_2\cdot z_2\)</span> <span class="math inline">\(\alpha (x_1\cdot z_1+2\cdot x_2\cdot z_2)+\beta (y_1\cdot z_1+2\cdot y_2\cdot z_2)=\alpha\langle x,z\rangle+\beta \langle y,z\rangle\)</span></p>
+<h3 id="d">d)</h3>
+<p><span class="math inline">\(\langle(x_1,x_2)^T,(y_1,y_2)^T\rangle:=x_1\cdot y_1\cdot x_2\cdot y_2\)</span></p>
+<p>Diese Konstruktion wiederspricht der Linearität im ersten Argument von Skalarprodukten:</p>
+<p><span class="math inline">\(x=y=z=(1,1)^T\)</span></p>
+<p><span class="math inline">\(\langle 1x+2y,z\rangle=(1x_1+2y_1)\cdot(1x_2+2y_2)\cdot z_1\cdot z_2=1+2+2+4\ne 1+2=1\langle x,z\rangle + 2\langle y, z\rangle\)</span></p>
+<h2 id="h07.2">H07.2</h2>
+<h3 id="a-1">a)</h3>
+<p>Zu zeigen: <span class="math inline">\(\forall b,b&#39;\in M:b\ne b&#39;\implies\forall \lambda_1,\lambda_2\in\mathbb{R}:\lambda_1\cdot b+\lambda_2\cdot b&#39;=0\implies \lambda_1=0\land\lambda_2=0\)</span></p>
+<p><span class="math inline">\(\lambda_1\cdot b+\lambda_2\cdot b&#39;=0\implies \lambda_1\cdot b\cdot b+\lambda_2\cdot b&#39;\cdot b=0\)</span>. Da <span class="math inline">\(b\cdot b&#39;=0:\lambda_1\cdot b\cdot b=0\)</span>. Da <span class="math inline">\(b\ne 0\)</span>, gilt <span class="math inline">\(\lambda_1=0\)</span>.</p>
+<p><span class="math inline">\(\lambda_1\cdot b+\lambda_2\cdot b&#39;=0\implies \lambda_1\cdot b\cdot b&#39;+\lambda_2\cdot b&#39;\cdot b&#39;=0\)</span>. Da <span class="math inline">\(b&#39;\cdot b=0:\lambda_2\cdot b&#39;\cdot b&#39;=0\)</span>. Da <span class="math inline">\(b&#39;\ne 0\)</span>, gilt <span class="math inline">\(\lambda_2=0\)</span>.</p>
+<p>Daraus folgt <span class="math inline">\(M\)</span> ist linear unabhängig.</p>
+<h3 id="b-1">b)</h3>
+<p><span class="math inline">\(v_1\cdot v_2=(\frac{1}{\sqrt{3}}\cdot\frac{1}{\sqrt{6}})(1+1-2)=0\)</span></p>
+<p><span class="math inline">\(v1\cdot v_3=(\frac{1}{\sqrt{3}}\cdot\frac{1}{\sqrt{2}})(1-1+0)=0\)</span></p>
+<p><span class="math inline">\(v2\cdot v_3=(\frac{1}{\sqrt{6}}\cdot\frac{1}{\sqrt{2}})(1-1+0)=0\)</span></p>
+<p>Daraus folgt die lineare Unabhängigkeit der drei Vektoren, daraus dass sie paarweise orthogonal sind und daraus das es sich um eine Orthogonalbasis handelt.</p>
+<p><span class="math inline">\(|v_1|=\frac{1}{\sqrt 3}\sqrt{1+1+1}=\frac{\sqrt 3}{\sqrt 3}=1\)</span></p>
+<p><span class="math inline">\(|v_2|=\frac{1}{\sqrt 6}\sqrt{1+1+4}=\frac{\sqrt 6}{\sqrt 6}=1\)</span></p>
+<p><span class="math inline">\(|v_3|=\frac{1}{\sqrt 2}\sqrt{1+1+0}=\frac{\sqrt 2}{\sqrt 2}=1\)</span></p>
+<p>Da es sich bei allen Vektoren um normalisierte Vektoren handelt, handelt es sich um eien Orthonormalbasis.</p>
+<p><span class="math inline">\(v=a\cdot v_1+b\cdot v_2+c\cdot v_3\)</span></p>
+<p><span class="math display">\[\begin{array}\\
+I: &amp;\frac{a}{\sqrt 3}&amp;+\frac{b}{\sqrt 6}&amp;+\frac{c}{\sqrt 2}&amp;=1\\
+II:&amp;\frac{a}{\sqrt 3}&amp;+\frac{b}{\sqrt 6}&amp;-\frac{c}{\sqrt 2}&amp;=4\\
+III:&amp;\frac{a}{\sqrt 3}&amp;-\frac{2b}{\sqrt 6}&amp;&amp;=5
+\end{array}\]</span></p>
+<p><span class="math display">\[\begin{array}\\
+I: &amp;\frac{a}{\sqrt 3}&amp;+\frac{b}{\sqrt 6}&amp;+\frac{c}{\sqrt 2}&amp;=1\\
+II-I:&amp;&amp;&amp;-\frac{2c}{\sqrt 2}&amp;=3\\
+III-I:&amp;&amp;-\frac{3b}{\sqrt 6}&amp;-\frac{c}{\sqrt 2}&amp;=4
+\end{array}\]</span></p>
+<p><span class="math inline">\(c=-\frac{3\sqrt{2}}{2}\)</span></p>
+<p>In <span class="math inline">\(III-I\)</span> einsetzen:</p>
+<p><span class="math inline">\(-\frac{3b}{\sqrt 6}-\frac{-\frac{3}{\sqrt{2}}}{\sqrt 2}=4\)</span></p>
+<p><span class="math inline">\(-\frac{3b}{\sqrt 6}=\frac{5}{2}\)</span></p>
+<p><span class="math inline">\(b=\frac{-5\sqrt 6}{6}\)</span></p>
+<p>In <span class="math inline">\(I\)</span> einsetzen:</p>
+<p><span class="math inline">\(\frac{a}{\sqrt 3}+\frac{-5}{6}+\frac{-3}{2}=1\)</span></p>
+<p><span class="math inline">\(a=\frac{10\sqrt 3}{3}\)</span></p>
+<p><span class="math inline">\(v=\frac{10\sqrt 3}{3}\frac{1}{\sqrt 3}v_1-\frac{5\sqrt 6}{6}\frac{1}{\sqrt 6}v_2-\frac{3\sqrt 2}{2}\frac{1}{\sqrt 2}v_3\)</span></p>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="übungsnummer-3">Übungsnummer 3</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Gruppennummer</th>
+<th>Übungsleiterin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>Eya Chemangui</td>
+<td>Roman Gräf</td>
+</tr>
+</tbody>
+</table>
+<h1 id="h3.1">H3.1</h1>
+<p>Induktionsanfang:</p>
+<p><span class="math display">\[q^0=1=\frac{1-q}{1-q}=\frac{1-q^1}{1-q},q\ne 1\]</span></p>
+<p>Induktionsvorraussetzung:</p>
+<p><span class="math display">\[\Sigma_{a=0}^{n}q^a=\frac{1-q^{n+1}}{1-q}\]</span></p>
+<p>Induktionsschluss:</p>
+<p><span class="math display">\[\Sigma_{a=0}^{n+1}q^a=q^{n+1}+\Sigma_{a=0}^{n}q^a\]</span> <span class="math display">\[=\frac{1-q^{n+1}}{1-q}+q^{n+1}=\frac{1-q^{n+1}+q^{n+1}\cdot(1-q)}{1-q}\]</span> <span class="math display">\[=\frac{1-q^{n+1}+q^{n+1}-q\cdot q^{n+1}}{1-q}=\frac{1-q^{n+2}}{1-q}\]</span></p>
+<h1 id="h3.2">H3.2</h1>
+<h2 id="a">a)</h2>
+<p>Für <span class="math inline">\(ggT(m,n)\)</span> existiert ein <span class="math inline">\(a,x,b\)</span> so dass <span class="math inline">\(a=xm+bn\)</span>. Dementsprechend gilt:</p>
+<p><span class="math display">\[a\text{ mod }n=k\text{ mod }n=x\cdot m+b\cdot n\text{ mod }n=x\cdot m\text{ mod }n\]</span></p>
+<p><span class="math inline">\(a\cdot i\text{ mod }n=k\text{ mod }n\)</span> gilt, da <span class="math inline">\(0\le k&lt;n\)</span></p>
+<h2 id="b">b)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>y</th>
+<th><span class="math inline">\(\lfloor\frac{x}{y}\rfloor\)</span></th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>47</td>
+<td>17</td>
+<td>2</td>
+<td>4</td>
+<td>-11</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td>13</td>
+<td>1</td>
+<td>-3</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>-3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h1 id="h3.3">H3.3</h1>
+<p>Aus <span class="math inline">\((10\text{ mod }11)^i\text{ mod }11=(10\text{ mod }11)^i\text{ mod }11\)</span> und <span class="math inline">\(10\text{ mod }11=-1\text{ mod }11\)</span>, folgt das <span class="math inline">\((10\text{ mod }11)^i\text{ mod }11=(-1\text{ mod }11)^i\text{ mod }11\)</span>, und laut Satz 2.1.5 aus den Folien folgt <span class="math inline">\((10)^i\text{ mod }11=(-1)^i\text{ mod }11\)</span>.</p>
+<p><span class="math display">\[a\text{ mod }11=\Sigma_{i=0}^{k}(a_i 10^i)\text{ mod }11=\Sigma_{i=0}^k(a_i 10^i\text{ mod }11)\text{ mod }11\]</span></p>
+<p>Aus dem obigen können wir <span class="math inline">\(10^i\text{ mod }11\)</span> durch <span class="math inline">\((-1)^i\text{ mod }11\)</span> ersetzen.</p>
+<p><span class="math display">\[a\text{ mod }11=\Sigma_{i=0}^k(a_i(-1)^i\text{ mod }11)\text{ mod }11\]</span> <span class="math display">\[=a_0\cdot 1 +a_1\cdot -1+a_2\cdot 1+a_3\cdot -1+\dots\text{ mod }11=a_0-a_1+a_2-a_3+\dots\text{ mod }11\]</span></p>
+</body>
+</html>

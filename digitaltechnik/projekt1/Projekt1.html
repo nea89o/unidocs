@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="digital-technik-projekt-teil-1">Digital Technik Projekt Teil 1</h1>
+<p>Roman Gräf</p>
+<h2 id="section">1.1</h2>
+<h3 id="a">a)</h3>
+<p>Die Bitbreite einer Vorzeichenlosen Binärzahl lässt sich wie folgt errechnen:</p>
+<p><span class="math display">\[b_2(X)=\lceil\frac{log(X+1)}{log(2)}\rceil\]</span></p>
+<p>Für <span class="math inline">\(11758070_{10}\)</span> Coronafälle ergibt sich eine Bitbreite von 24.</p>
+<h3 id="b">b)</h3>
+<p>Die benötigten Stellen für Basis-7-Zahlen errechnet sich durch <span class="math inline">\(b_7(X)=\lceil\frac{X+1}{log(7)}\rceil\)</span>. Dementsprechend benötigt man für die Zahl <span class="math inline">\(11758070_{10}\)</span> 9 Stellen.</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(\lfloor\frac{X}{7}\rfloor\)</span></th>
+<th><span class="math inline">\(X\)</span> mod <span class="math inline">\(7\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(11758070\)</span></td>
+<td><span class="math inline">\(\lfloor 11758070/7\rfloor=1679724\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1679724\)</span></td>
+<td><span class="math inline">\(\lfloor 1679724/7\rfloor=239960\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(239960\)</span></td>
+<td><span class="math inline">\(\lfloor 239960/7\rfloor=34280\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(34280\)</span></td>
+<td><span class="math inline">\(\lfloor 34280/7\rfloor=4897\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(4897\)</span></td>
+<td><span class="math inline">\(\lfloor 4897/7\rfloor=699\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(699\)</span></td>
+<td><span class="math inline">\(\lfloor 699/7\rfloor=99\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(99\)</span></td>
+<td><span class="math inline">\(\lfloor 99/7\rfloor=14\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(14\)</span></td>
+<td><span class="math inline">\(\lfloor 14/7\rfloor=2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(\lfloor 2/7\rfloor=0\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(11758070_{10}=201641042_{7}\)</span></p>
+<h3 id="c">c)</h3>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(\lfloor\frac{X}{7}\rfloor\)</span></th>
+<th><span class="math inline">\(X\)</span> mod <span class="math inline">\(7\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(374827\)</span></td>
+<td><span class="math inline">\(\lfloor 374827/7\rfloor=53546\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(53546\)</span></td>
+<td><span class="math inline">\(\lfloor 53546/7\rfloor=7649\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(7649\)</span></td>
+<td><span class="math inline">\(\lfloor 7649/7\rfloor=1092\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1092\)</span></td>
+<td><span class="math inline">\(\lfloor 1092/7\rfloor=156\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(156\)</span></td>
+<td><span class="math inline">\(\lfloor 156/7\rfloor=22\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(22\)</span></td>
+<td><span class="math inline">\(\lfloor 22/7\rfloor=3\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(\lfloor 3/7\rfloor=0\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(374827_{10}=3120535_{7}\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(\lfloor\frac{X}{7}\rfloor\)</span></th>
+<th><span class="math inline">\(X\)</span> mod <span class="math inline">\(7\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(212164\)</span></td>
+<td><span class="math inline">\(\lfloor 212164/7\rfloor=30309\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(30309\)</span></td>
+<td><span class="math inline">\(\lfloor 30309/7\rfloor=4329\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(4329\)</span></td>
+<td><span class="math inline">\(\lfloor 4329/7\rfloor=618\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(618\)</span></td>
+<td><span class="math inline">\(\lfloor 618/7\rfloor=88\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(88\)</span></td>
+<td><span class="math inline">\(\lfloor 88/7\rfloor=12\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(12\)</span></td>
+<td><span class="math inline">\(\lfloor 12/7\rfloor=1\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(\lfloor 1/7\rfloor=0\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(212164_{10}=1542361_{7}\)</span></p>
+<h4 id="neuerkrankungen">Neuerkrankungen:</h4>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(+\)</span></td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="odd">
+<td>Übertrag</td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(1\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(=\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(201641042_7+3120535_7=205061610_7\)</span></p>
+<h4 id="genesungen">Genesungen</h4>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(-\)</span></td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td>Übertrag</td>
+<td></td>
+<td></td>
+<td><span class="math inline">\(1\)</span></td>
+<td></td>
+<td><span class="math inline">\(1\)</span></td>
+<td></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(=\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(205061610_7-1542361_7=203216216_7\)</span></p>
+<h4 id="zurück-zu-basis-10">Zurück zu Basis 10</h4>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(a_i\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\times 7+a_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(14\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(14\)</span></td>
+<td><span class="math inline">\(101\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(101\)</span></td>
+<td><span class="math inline">\(709\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(709\)</span></td>
+<td><span class="math inline">\(4964\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(4964\)</span></td>
+<td><span class="math inline">\(34754\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(34754\)</span></td>
+<td><span class="math inline">\(243280\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(243280\)</span></td>
+<td><span class="math inline">\(1702961\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(6\)</span></td>
+<td><span class="math inline">\(1702961\)</span></td>
+<td><span class="math inline">\(11920733\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Nach einer Woche gibt es <span class="math inline">\(203216216_{7}=11920733_{10}\)</span> aktive Fälle.</p>
+<h2 id="section-1">1.2</h2>
+<h3 id="a-1">a)</h3>
+<p>Da <span class="math inline">\(1000000_{10}\)</span> eine Bitbreite von 20 hat und wir zwei Zahlen haben, brauchen wir <span class="math inline">\(20+2=22\)</span> Paritätsbits, sowie <span class="math inline">\(2*20=40\)</span> Datenbits falls wir Genesungen und Neuerkrankungen seperat übertragen. Eine Übertragung von Fallzahlen bis zu <span class="math inline">\(1000000000_{10}\)</span> braucht eine Bitbreite von <span class="math inline">\(30\)</span>. Dementsprechend ist eine Übertragung aller aktiven Fälle ohne Parität (<span class="math inline">\(30\)</span> Bits) effizienter als eine Übertragung der Genesungen und Neuerkrankungen mit Parität (<span class="math inline">\(62\)</span> Bits).</p>
+<h3 id="b-1">b)</h3>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>P</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td><del>1</del> 0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>Das durchgestrichene 1 Bit muss eine null sein, da Längs und Querparität für diese Zelle falsch sind. Dementsprechend liegen <span class="math inline">\(100932_{10}\)</span> Genesungen vor.</p>
+<h2 id="section-2">1.3</h2>
+<h3 id="a-2">a)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Ziffer</th>
+<th><span class="math inline">\(x_0\)</span></th>
+<th><span class="math inline">\(x_1\)</span></th>
+<th><span class="math inline">\(x_2\)</span></th>
+<th><span class="math inline">\(x_3\)</span></th>
+<th><span class="math inline">\(a\)</span></th>
+<th><span class="math inline">\(b\)</span></th>
+<th><span class="math inline">\(c\)</span></th>
+<th><span class="math inline">\(d\)</span></th>
+<th><span class="math inline">\(e\)</span></th>
+<th><span class="math inline">\(f\)</span></th>
+<th><span class="math inline">\(g_1\)</span></th>
+<th><span class="math inline">\(g_2\)</span></th>
+<th><span class="math inline">\(h\)</span></th>
+<th><span class="math inline">\(i\)</span></th>
+<th><span class="math inline">\(j\)</span></th>
+<th><span class="math inline">\(k\)</span></th>
+<th><span class="math inline">\(l\)</span></th>
+<th><span class="math inline">\(m\)</span></th>
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(dp\)</span></th>
+<th><span class="math inline">\(dk\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-2">b)</h3>
+<p><span class="math inline">\(a=(x_0\lor x_1\lor x_2\lor \neg x_3)\land (x_0\lor \neg x_1\lor x_2\lor x_3)\)</span></p>
+<p><span class="math inline">\(b=(x_0\lor \neg x_1\lor x_2\lor \neg x_3)\land (x_0\lor \neg x_1\lor \neg x_2\lor x_3)\)</span></p>
+<p><span class="math inline">\(c=(x_0\lor x_1\lor \neg x_2\lor x_3)\)</span></p>
+<p><span class="math inline">\(d=(x_0\lor x_1\lor x_2\lor \neg x_3)\land (x_0\lor \neg x_1\lor x_2\lor x_3)\land (x_0\lor \neg x_1\lor \neg x_2\lor \neg x_3)\)</span></p>
+<p><span class="math inline">\(e=(\neg x_0\land \neg x_1\land \neg x_2\land \neg x_3)\lor (\neg x_0\land \neg x_1\land x_2\land \neg x_3)\lor\)</span> <span class="math inline">\((\neg x_0\land x_1\land x_2\land \neg x_3)\lor (x_0\land \neg x_1\land \neg x_2\land \neg x_3)\)</span></p>
+<p><span class="math inline">\(f=(x_0\lor x_1\lor x_2\lor \neg x_3)\land (x_0\lor x_1\lor \neg x_2\lor x_3)\land (x_0\lor x_1\lor \neg x_2\lor \neg x_3)\land\)</span> <span class="math inline">\((x_0\lor \neg x_1\lor \neg x_2\lor \neg x_3)\)</span></p>
+<p><span class="math inline">\(g_1=(x_0\lor x_1\lor x_2\lor x_3)\land (x_0\lor x_1\lor x_2\lor \neg x_3)\land (x_0\lor \neg x_1\lor \neg x_2\lor \neg x_3)\)</span></p>
+<p><span class="math inline">\(g_2=(x_0\lor x_1\lor x_2\lor x_3)\land (x_0\lor x_1\lor x_2\lor \neg x_3)\land (x_0\lor \neg x_1\lor \neg x_2\lor \neg x_3)\)</span></p>
+<p><span class="math inline">\(h=0\)</span></p>
+<p><span class="math inline">\(i=0\)</span></p>
+<p><span class="math inline">\(j=(\neg x_0\land \neg x_1\land \neg x_2\land \neg x_3)\lor (\neg x_0\land \neg x_1\land \neg x_2\land x_3)\)</span></p>
+<p><span class="math inline">\(k=(\neg x_0\land \neg x_1\land \neg x_2\land \neg x_3)\)</span></p>
+<p><span class="math inline">\(l=0\)</span></p>
+<p><span class="math inline">\(m=0\)</span></p>
+<p><span class="math inline">\(n=0\)</span></p>
+<p><span class="math inline">\(dp=0\)</span></p>
+<p><span class="math inline">\(dk=0\)</span></p>
+<h2 id="todo">TODO</h2>
+<h2 id="section-3">1.4</h2>
+<h3 id="a-3">a</h3>
+<p><span class="math inline">\(G=\overline{\overline{45}(4+5)}\stackrel{\text{T12}}{=}\overline{(\overline{4}+\overline{5})(4+5)}\stackrel{\text{T8}}{=}\overline{\overline{4}4+\overline{4}5+\overline{5}4+\overline{5}5}\)</span> <span class="math inline">\(G\stackrel{\text{T5}}{=}\overline{\overline{4}5+\overline{5}4}\stackrel{\text{T12}}{=}\overline{\overline{4}5}\cdot\overline{\overline{5}4}\stackrel{\text{T12}}{=}(\overline{4}+5)(\overline{5}+4)\stackrel{\text{T8}}{=}(\overline{4}+5)\overline{5}+(\overline{4}+5)4\)</span> <span class="math inline">\(G\stackrel{\text{T8}}{=}\overline{4}\cdot\overline{5}+\overline{5}5+\overline{4}4+45\stackrel{\text{T5}}{=}\overline{4}\cdot\overline{5}+45\)</span> <span class="math inline">\(F=0\overline{4}(125+\overline{3}5+\overline{3}\cdot\overline{5}+123)+\overline{0}12(\overline{3}4\overline{5}+\overline{3}4\overline{0}+\overline{3}45)+1\overline{2}3G\)</span> <span class="math inline">\(\stackrel{\text{T5}}{=}0\overline{4}(125+\overline{3}+123)+\overline{0}12(\overline{3}4\overline{5}+\overline{3}4\overline{0}+\overline{3}45)+1\overline{2}3G\)</span> <span class="math inline">\(\stackrel{\text{T8}}{=}0\overline{4}125+0\overline{4}\cdot\overline{3}+0\overline{4}123+\overline{0}12\overline{3}4{5}+\overline{0}12\overline{3}4\overline{0}+\overline{0}12\overline{3}4\overline{5}+1\overline{2}3G\)</span> <span class="math inline">\(F=\overline{4}125+0\overline{4}\cdot\overline{3}+0\overline{4}123+\overline{0}12\overline{3}4\overline{5}+\overline{0}12\overline{3}4\overline{0}+\overline{0}12\overline{3}4\overline{5}+1\overline{2}3(\overline{4}\cdot\overline{5}+45)\)</span> <span class="math inline">\(\stackrel{\text{T8}}{=}\overline{4}125+0\overline{4}\cdot\overline{3}+0\overline{4}123+\overline{0}12\overline{3}4\overline{5}+\overline{0}12\overline{3}4\overline{0}+\overline{0}12\overline{3}4\overline{5}+1\overline{2}3\overline{4}\cdot\overline{5}+1\overline{2}345\)</span> <span class="math inline">\(\stackrel{\text{T6}}{=}12\overline{4}5+0\overline{3}\cdot\overline{4}+0123\overline{4}+\overline{0}12\overline{3}4\overline{5}+\overline{0}12\overline{3}4\overline{5}+\overline{0}\cdot\overline{0}12\overline{3}4+1\overline{2}3\overline{4}\cdot\overline{5}+1\overline{2}345\)</span> <span class="math inline">\(\stackrel{\text{T3}}{=}12\overline{4}5+0\overline{3}\cdot\overline{4}+0123\overline{4}+\overline{0}12\overline{3}4\overline{5}+\overline{0}12\overline{3}4\overline{5}+\overline{0}12\overline{3}4+1\overline{2}3\overline{4}\cdot\overline{5}+1\overline{2}345\)</span> <span class="math inline">\(\stackrel{\text{T8}}{=}12\overline{4}5+0\overline{3}\cdot\overline{4}+0123\overline{4}+\overline{0}12\overline{3}4(\overline{5}+\overline{5}+ONE)+1\overline{2}3\overline{4}\cdot\overline{5}+1\overline{2}345\)</span> <span class="math inline">\(\stackrel{\text{T2}}{=}12\overline{4}5+0\overline{3}\cdot\overline{4}+0123\overline{4}+\overline{0}12\overline{3}4+1\overline{2}3\overline{4}\cdot\overline{5}+1\overline{2}345\)</span></p>
+<!-- TODO -->
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+  });
+  </script>
+  <style>
+      html {
+          line-height: 1.7;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+      }
+  
+      body {
+          margin: 0 auto;
+          max-width: 40em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          word-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              font-size: 0.9em;
+              padding: 1em;
+          }
+      }
+  
+      @media print {
+          body {
+              background-color: transparent;
+              color: black;
+          }
+  
+          p,
+          h2,
+          h3 {
+              orphans: 3;
+              widows: 3;
+          }
+  
+          h2,
+          h3,
+          h4 {
+              page-break-after: avoid;
+          }
+      }
+  
+      p {
+          margin-top: 1.7em;
+      }
+  
+      a {
+          color: #1a1a1a;
+      }
+  
+      a:visited {
+          color: #1a1a1a;
+      }
+  
+      img {
+          max-width: 100%;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 1.7em;
+      }
+  
+      ol,
+      ul {
+          padding-left: 1.7em;
+          margin-top: 1.7em;
+      }
+  
+      li>ol,
+      li>ul {
+          margin-top: 0;
+      }
+  
+      blockquote {
+          margin: 1.7em 0 1.7em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          font-style: italic;
+      }
+  
+      code {
+          font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+          background-color: #f0f0f0;
+          font-size: 85%;
+          margin: 0;
+          padding: .2em .4em;
+      }
+  
+      pre {
+          line-height: 1.5em;
+          padding: 1em;
+          background-color: #f0f0f0;
+          overflow: auto;
+      }
+  
+      pre code {
+          padding: 0;
+          overflow: visible;
+      }
+  
+      hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin-top: 1.7em;
+      }
+  
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+      }
+  
+  
+      th, td {
+        border: 1px solid lightgray;
+        padding: 0.2em;
+  
+      }
+  
+      header {
+          margin-bottom: 6em;
+          text-align: center;
+      }
+  
+      nav a:not(:hover) {
+          text-decoration: none;
+      }
+  
+      code {
+          white-space: pre-wrap;
+      }
+  
+      span.smallcaps {
+          font-variant: small-caps;
+      }
+  
+      span.underline {
+          text-decoration: underline;
+      }
+  
+      div.column {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+      }
+  
+      div.hanging-indent {
+          margin-left: 1.5em;
+          text-indent: -1.5em;
+      }
+  
+      ul.task-list {
+          list-style: none;
+      }
+  </style>
+</head>
+<body>
+<h1 id="übungsnummer-2">Übungsnummer 2</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Gruppennummer</th>
+<th>Übungsleiterin</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>09</td>
+<td>Emma Stellwag</td>
+<td>Roman Gräf</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>Rebekka Gehlhaar</td>
+<td>Kai Dominik Westphal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h4.1">H4.1)</h2>
+<pre><code>A := rTT | AL
+L := uAL | uA
+T := x | fTT</code></pre>
+<h3 id="schritt-1-terminale-durch-nichtterminale-mit-entsprechender-produktion-ersetzen.">Schritt 1: Terminale durch Nichtterminale mit entsprechender Produktion ersetzen.</h3>
+<pre><code>A := RTT | AL
+L := UAL | UA
+T := X | FTT
+R := r
+U := u
+X := x
+F := f</code></pre>
+<h3 id="schritt-2-rechte-seiten-mit-mehr-als-zwei-nichtterminalsymbolen-ersetzen.">Schritt 2: Rechte Seiten mit mehr als zwei Nichtterminalsymbolen ersetzen.</h3>
+<pre><code>A := RH | AL
+L := UB | AL
+T := X | FH
+H := TT
+B := AL
+R := r
+U := u
+X := x
+F := f</code></pre>
+<h3 id="schritt-3-kettenregeln-entfernen">Schritt 3: Kettenregeln entfernen</h3>
+<pre><code>A := RH | AL
+L := UB | AL
+T := x | FH
+H := TT
+B := AL
+R := r
+U := u
+F := f</code></pre>
+<h2 id="section">4.2)</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>x</th>
+<th>m</th>
+<th>x</th>
+<th>x</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>S</td>
+<td>N</td>
+<td>S</td>
+<td>S</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><span class="math inline">\(\emptyset\)</span></td>
+<td>M</td>
+<td><span class="math inline">\(\emptyset\)</span></td>
+<td>T</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><span class="math inline">\(\emptyset\)</span></td>
+<td>S</td>
+<td>S</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><span class="math inline">\(\emptyset\)</span></td>
+<td>M, T</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>S</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Die sich dazu ergebende Ableitung wäre:</p>
+<p><span class="math inline">\(S\rightarrow ST\rightarrow SNS\rightarrow SNST\rightarrow SNSSP\rightarrow SNSSp\)</span> <span class="math inline">\(\rightarrow SNSxp\rightarrow SNxxp\rightarrow Smxxp\rightarrow xmxxp\)</span></p>
+<h2 id="section-1">4.3)</h2>
+<h3 id="a">a)</h3>
+<p>Angenommen <span class="math inline">\(L_1\)</span> wäre eine kontextfreie Sprache. Dann existiert eine Pumping-Länge <span class="math inline">\(p\in\mathbb N\)</span>, für die sich jedes Wort <span class="math inline">\(z\in L_1\)</span> mit <span class="math inline">\(|z|\geq p\)</span> in <span class="math inline">\(z=u\cdot v\cdot w\cdot x\cdot y:u,v,w,x,y\in \Sigma^* \land |v\cdot x|&gt;0 \land |v\cdot w \cdot x|\leq p\)</span> aufteilen lässt, sodass <span class="math inline">\(u\cdot v^k\cdot w\cdot x^k \cdot y\in L_1\)</span>.</p>
+<p>Nehmen wir das Wort <span class="math inline">\(z=a^pb^pa^pb^p\)</span>. Es gilt offensichtlich das <span class="math inline">\(z\in L_1\)</span> (mit <span class="math inline">\(t=a^pb^p\)</span>) und das <span class="math inline">\(|z| \geq p\)</span>.</p>
+<p>Da <span class="math inline">\(|v\cdot w \cdot x| \leq p\)</span>, muss <span class="math inline">\(v\cdot w \cdot x\)</span> entweder komplett aus einem Symbol bestehen(d.h. <span class="math inline">\(a^n\)</span> oder <span class="math inline">\(b^n\)</span>), oder kann maximal einmal das Symbol wechseln (d.h. <span class="math inline">\(a^nb^m\)</span> oder <span class="math inline">\(b^na^m\)</span>)</p>
+<p>Falls <span class="math inline">\(v\cdot w \cdot x\)</span> nur aus einem Symbol besteht, wird beim aufpumpen eine ungleiche Anzahl an <span class="math inline">\(a\)</span>s und an <span class="math inline">\(b\)</span>s erzeugt, weshalb das neue Wort nicht in <span class="math inline">\(L_1\)</span> ist, weswegen <span class="math inline">\(L_1\)</span> keine kontextfreie Spräche wäre.</p>
+<p>Dementsprechend muss <span class="math inline">\(v\cdot w\cdot x\)</span> einen Symbolwechsel enthalten. Falls dieser Symbolwechsel in der Mitte von <span class="math inline">\(t\)</span> ist dann wird nur das eine <span class="math inline">\(t\)</span> aufgepumpt, und das andere bleibt gleich, weswegen das aufgepumpte Wort nicht mehr im Format <span class="math inline">\(t&#39;t&#39;\)</span> ist, d.h. kein Teil der Sprache <span class="math inline">\(L_1\)</span>. Falls der Symbolwechsel in der Mitte zwischen den beiden <span class="math inline">\(t\)</span>s stattfindet, dann wird beim aufpumpen dem einen Wort nur <span class="math inline">\(a\)</span>s und dem anderen nur <span class="math inline">\(b\)</span>s hinzugefügt, was dazu führt das die aufgepumpten Wörter eine ungleiche Anzahl an <span class="math inline">\(a\)</span>s haben, und dementsprechend nicht gleich sind.</p>
+<p>Daraus lässt sich schließen das <span class="math inline">\(L_1\)</span> nicht kontextfrei ist.</p>
+<h3 id="b">b)</h3>
+<p>Angenommen <span class="math inline">\(L_2\)</span> wäre eine kontextfreie Sprache. Dann existiert eine Pumping-Länge <span class="math inline">\(p\in\mathbb N\)</span>, für die sich jedes Wort <span class="math inline">\(z\in L_2\)</span> mit <span class="math inline">\(|z|\geq p\)</span> in <span class="math inline">\(z=u\cdot v\cdot w\cdot x\cdot y:u,v,w,x,y\in \Sigma^* \land |v\cdot x|&gt;0 \land |v\cdot w \cdot x|\leq p\)</span> aufteilen lässt, sodass <span class="math inline">\(u\cdot v^k\cdot w\cdot x^k \cdot y\in L_2\)</span>.</p>
+<p>Nehmen wir das Wort <span class="math inline">\(z=a^pb^pa^p\)</span>. Es gilt offensichtlich das <span class="math inline">\(z\in L_2\)</span>(mit <span class="math inline">\(s=s^{-1}=a^p,t=b^p\)</span>) und das <span class="math inline">\(|z|\geq p\)</span>.</p>
+<p>Da <span class="math inline">\(|v\cdot w\cdot x| \leq p\)</span>, muss <span class="math inline">\(v\cdot w\cdot x\)</span> entweder komplett aus einem Symbol bestehen (d.h. <span class="math inline">\(a^n\)</span> oder <span class="math inline">\(b^n\)</span>), oder maximal einmal das Symbol wechselen (d.h. <span class="math inline">\(a^nb^m\)</span> oder <span class="math inline">\(b^na^m\)</span>).</p>
+<p>Falls <span class="math inline">\(v\cdot w\cdot x\)</span> nur aus einem Symbol besteht, wird beim aufpumpen nur <span class="math inline">\(s\)</span> oder <span class="math inline">\(t\)</span> länger, und ist demenstprechend aufgepumpt nicht mehr Teil von <span class="math inline">\(L_2\)</span>.</p>
+<p>Dementsprechend muss <span class="math inline">\(v\cdot w\cdot x\)</span> genau einen Symbolwechsel enthalten. Da Symbolwechsel in <span class="math inline">\(z\)</span> nur zwischen <span class="math inline">\(s\)</span> oder <span class="math inline">\(s^{-1}\)</span> und <span class="math inline">\(t\)</span> auftreten, wird niemals <span class="math inline">\(s\)</span> und <span class="math inline">\(s^{-1}\)</span> aufgepumpt, aber immer mindestens eins der beiden. Daraus folgt das das aufgepumpte Wort ungleiche <span class="math inline">\(|s|\)</span> und <span class="math inline">\(|s^{-1}|\)</span> haben müsste, was nicht der Fall sein kann.</p>
+<p>Daraus folgt das <span class="math inline">\(L_2\)</span> keine kontextfreie Sprache ist.</p>
+<h3 id="c">c)</h3>
+<p>Falls <span class="math inline">\(L\)</span> eine kontextfreie Sprache ist, trifft das Pumping-Lemma zu. Der Herleitung des Pumping-Lemmas für <span class="math inline">\(L\)</span> trifft auch für <span class="math inline">\(L\backslash\{\epsilon\}\)</span> zu, da die Pumping-Länge immer größer als <span class="math inline">\(0\)</span> ist, und dementsprechend <span class="math inline">\(\epsilon\)</span> in beiden Argumentationen vernachlässigt wird.</p>
+<h3 id="d">d)</h3>
+<p>Wählen wir zwei Sprachen mit <span class="math inline">\(\Sigma=\{a,b,c\}\)</span>: <span class="math inline">\(L_1=\{a^nb^mc^l|n,m,l\in\mathbb N\}\)</span> und <span class="math inline">\(L_2=\{a^nb^nc^n | n\in\mathbb N\}\)</span>, welche erwisenermaßen nach Bespiel 3.3.9 kontextsensitiv ist. Der Schnitt <span class="math inline">\(L_1\cap L_2\)</span> ist wieder <span class="math inline">\(L_2\)</span>, was nicht kontextfrei ist.</p>
+</body>
+</html>
